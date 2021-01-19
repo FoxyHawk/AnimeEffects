@@ -125,11 +125,7 @@ bool Exporter::FFMpeg::start(const QString& aArgments)
         this->mFinished = true;
     });
 
-    // TODO improve the arguments build process
-    QStringList arguments;
-    arguments = aArgments.split(' ');
-
-    mProcess->start(program, arguments, QIODevice::ReadWrite);
+    mProcess->start(program + " " + aArgments, QIODevice::ReadWrite);
 
     return !mErrorOccurred;
 }

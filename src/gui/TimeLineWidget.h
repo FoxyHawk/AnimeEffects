@@ -78,7 +78,7 @@ private:
 
     // for animation
     QTimer mTimer;
-    QElapsedTimer mElapsed;
+    QTime mElapsed;
     core::Frame mBeginFrame;
     core::Frame mLastFrame;
     bool mDoesLoop;
